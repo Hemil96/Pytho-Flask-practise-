@@ -20,6 +20,7 @@ def hello_world():
     html = """
         <html>
             <h1>Welcome to {{library_name}} library!</h1>
+            # Using an <ul> tag add the authors using the template engine
             <ul>
                 {% for each in authors %}
                 <li> {{ each }}</li>
@@ -30,5 +31,5 @@ def hello_world():
     authors = ["Alan Poe", "Jorge L. Borges","Hemil"]
     rendered_html = render_template_string(html, library_name=library_name,authors = authors)
     
-    # Using an <ul> tag add the authors using the template engine
+    
     return rendered_html
